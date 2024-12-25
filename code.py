@@ -29,19 +29,20 @@ def check_brand():
 # Create the main window
 window = Tk()
 window.title("Brand Boycott Checker")
-window.geometry("500x200")  # Adjusted width for longer brand names
+window.geometry("500x200")
+window.configure(bg="ivory2") # Adjusted width for longer brand names
 
 # Label
-label = Label(window, text="Enter a brand name:", font=("Arial", 12))
-label.pack(pady=10)
+label = Label(window, text="Enter a brand name:", font=("Arial", 12), bg="ivory2")
+label.place(x=20,y=20)
 
 # Entry field
-entry = Entry(window, width=40, font=("Arial", 12))  # Increased width for clarity
-entry.pack(pady=5)
+entry = Entry(window, width=20, font=("Arial", 12))  # Increased width for clarity
+entry.place(x=170,y=20)
 
 # Button to check the brand
-button = Button(window, text="Check", command=check_brand, font=("Arial", 12), bg="lightblue")
-button.pack(pady=10)
+button = Button(window, text="Check", command=check_brand, font=("Arial", 12), bg="ivory2")
+button.place(x=370,y=15)
 
 # Run the application
 window.mainloop()
